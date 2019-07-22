@@ -3,30 +3,47 @@ layout: default
 title: Главная
 ---
 
-{% for post in paginator.posts %}
-<section>
-  <h2>
-    <a href='{{ site.url }}{{ post.url }}' title='{{ post.title }}'>
-      {{ post.title }}
-    </a>
-  </h2>
-  
-  <p>{{ post.excerpt | strip_html | truncate: 250 }}</p>
-</section>       
-{% endfor %}
+<p><strong>ООО «Винокс»</strong> - динамично развивающаяся компания по поставке европейского фильтрационного оборудования на территорию Беларуси. Мы оказываем комплекс услуг по подготовке и обеспечению процессов фильтрации жидкостей и газов (фильтрация и стерилизация воды, молока, вина, промышленная очистка воздуха и другое).</p>
+<img src="/assets/img/content/ico.webp" onerror="this.onerror=null; this.src='/assets/img/content/ico.jpg'" style="width: 100%">
 
-<p class="pagination">
-<span>
-{% if paginator.previous_page %}
-<a href='{{ site.url }}{{ paginator.previous_page_path }}'>Previous</a>
-{% endif %}
-</span>
-<span>
-&mdash; {{ paginator.page }} of {{ paginator.total_pages }} &mdash;
-</span>
-<span>
-{% if paginator.next_page %}
-<a href='{{ site.url }}{{ paginator.next_page_path }}'>Next</a>
-{% endif %}
-</span>
-</p>
+<p>ОТЧЕТ О ПЕРВОМ СЕМИНАРЕ GENERAL ELECTRIC В БЕЛАРУСИ</p>
+<p>Наши партнеры – это мировые лидеры в области фильтрации: PALL, American Air Filter, 3M (Cuno), Hepa фильтры. Целью компании является повышение качества выпускаемой продукции нашими клиентами, благодаря внедрению инновационных разработок в сфере фильтрационного оборудования.</p>
+<p>Основные клиенты ООО «Винокс» – предприятия пищевой и фармацевтической промышленности. Вся представленная продукция подвергается технической проверке и имеет сертификаты соответствия Республики Беларусь.</p>
+<p>Специалисты компании регулярно проходят обучение и тренинги повышения квалификации. Кроме того, наш инженерный состав участвует в республиканских семинарах в качестве лекторов.</p>
+<p>Сотрудничество с ООО «Винокс» — это надежные отношения, сопровождение и консалтинг на всех этапах взаимодействия, оперативное реагирование в решении поставленных задач.</p>
+
+<div class="events-area">
+	<h4>События</h4>
+	<ul>
+		<li>
+			<img class="lazyload" 
+			data-src="/assets/img/content/events/001.jpg" 
+			src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 93 61'%3E%3C/svg%3E"
+			>
+			<div class="desc">
+				<span class="date">13.12.2017</span>
+				<a href="#">Первый семинар корпорации General Electric в Беларуси</a>
+			</div>
+		</li>
+		<li>
+			<img class="lazyload" 
+			data-src="/assets/img/content/events/002.jpg"
+			src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 93 61'%3E%3C/svg%3E"
+			>
+			<div class="desc">
+				<span class="date">09.02.2017</span>
+				<a href="#">Использование активированного угля в процессе получения биопрепаратов</a>
+			</div>
+		</li>
+		<li>
+			<img class="lazyload" 
+			data-src="/assets/img/content/events/003.jpg"
+			src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 93 61'%3E%3C/svg%3E"
+			>
+			<div class="desc">
+				<span class="date">02.08.2016</span>
+				<a href="#">Применение мембранных технологий в молочной промышленности</a>
+			</div>
+		</li>
+	</ul>
+</div>

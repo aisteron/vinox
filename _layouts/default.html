@@ -10,7 +10,7 @@
             {{ site.name }} &mdash; {{ site.description }}
         {% endif %}
     </title>
-    <link rel='stylesheet' href='{{ site.url }}/assets/css/index.css' type='text/css'>
+    <link rel='stylesheet' href='/assets/css/index.css' type='text/css'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
 </head>
@@ -24,7 +24,12 @@
         {% include sidebar.html %}
     </div>
     <div class="content">
-        {{ content }}
+        <div class="inner">
+        <div class="bread">
+            {% include nav-breadcrumbs.html %}
+        </div>    
+          {{ content }}  
+        </div>  
     </div>
     <div class="footer">
         {% include footer.html %}

@@ -1,0 +1,161 @@
+.content
+ .inner	
+  padding: 20px 30px
+  @media (max-width: 540px)
+   padding: 0.5rem 1.6rem
+ p 
+  font-size: 0.8rem
+  text-align: justify
+  line-height: 130%
+ table tr td
+  font-size: 0.8rem
+ table.process
+  tr td 
+   padding: 0.3rem 1rem
+  tr:nth-child(2n)
+   background: #e0e0e0
+  tr:nth-child(2n+1)
+   background: #f3f3f3  
+ ul li, ol li 
+  font-size: 0.8rem
+  line-height: 130%
+ ol
+  li
+   padding-bottom: 0.3rem
+  @media (max-width: 400px)
+   padding-left: 0 
+ ul.square
+  padding-left: 1rem
+  li 
+   line-height: 150%
+   list-style-position: outside
+   list-style-type: square
+   //&:before 
+    content: '\25A0'
+    font-size: 0.8rem
+    color: #3a4292
+    padding-right: 0.5rem
+    vertical-align: text-bottom
+ .category-list
+  display: flex
+  flex-wrap: wrap
+ .event-list
+  li
+   background-color: #eee
+   display: flex
+   position: relative
+   margin-bottom: 1px
+   .left 
+    align-self: center
+   .right
+    align-self: center
+    padding: 1rem
+    span.date  
+     position: absolute
+     right: 0.3rem
+     top: 0.3rem
+     font-weight: bold
+     font-size: 12px
+
+  img.lazyload
+   background-image: url(/assets/img/spinner.gif)
+   background-position: center center
+   background-repeat: no-repeat
+ .parts
+  @media (max-width: 380px)
+   display: flex
+   flex-wrap: wrap
+   flex-direction: column-reverse
+  .right-part
+   margin-left: 1rem
+   float: right
+   @media (max-width: 380px)
+    margin: 1rem auto
+    float: none    
+  .related
+   background: #e7e7e7
+   padding: 0.7rem
+   width: 200px
+   ul.square li 
+    padding-bottom: 0.4rem
+   h3
+    background: #333
+    padding: .6rem
+    margin: -.67rem
+    font-size: 1.1rem
+    color: #eee 
+ .contact-wrap
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between    
+ .wrap-table
+   width: 100%
+   overflow: hidden
+   @media (max-width: 670px)
+    overflow: auto
+   table
+    width: calc(100% + 4px)
+    margin: 0 -2px
+    @media (max-width: 440px)
+     width: 70vw
+     display: block   
+ ol.breadcrumb.list-unstyled
+  display: flex
+  list-style: none
+  padding: 0
+  font-size: 13px
+  li
+   padding-right: 1rem
+   position: relative
+   &:after
+    content: '|'
+    padding-left: 1rem
+    position: absolute
+    top: 0
+    right: 9%
+    @media (min-width: 730px)
+     right: 6px
+   &:last-of-type
+    &:after
+     content: ''  
+  
+ .events-area
+  background: #f2f2f2
+  padding: 1rem
+  h4
+   font-size: 20px
+   color: #3a4292
+   font-weight: 100
+   margin: 0
+   @media (max-width: 470px)
+    text-align: center
+  ul
+   display: flex
+   flex-wrap: wrap
+   justify-content: space-between
+   padding: 0
+   font-size: 0.75rem
+   li 
+    width: 185px
+    margin-bottom: 1rem
+    @media (max-width: 470px)
+     margin: 1rem auto
+    div.desc
+     margin-top: 0.3rem    
+     span.date
+      font-weight: bold   
+.footer
+ small
+  font-size: 0.72rem
+  text-shadow: 1px 1px 1px #afafaf
+ p.year
+  padding-left: 1.5rem
+  float: left
+  @media (max-width: 470px)
+   float: none
+ p.credit
+  padding-right: 1.9rem
+  float: right
+  @media (max-width: 470px)
+   float: none
+   padding-left: 1.5rem	 	

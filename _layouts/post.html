@@ -1,8 +1,53 @@
----
-layout: default
----
-<h1>{{ page.title }}{{ page.shortUrl }}</h1>
-<div class='separator'></div>
-        
-{{ content }}
+<!DOCTYPE html>
+<html>
 
+<head>
+    <meta charset='utf-8'>
+    <title>
+        {% if page.title %}
+            {{ page.title }}
+        {% else %} 
+            {{ site.name }} &mdash; {{ site.description }}
+        {% endif %}
+    </title>
+    <link rel='stylesheet' href='/assets/css/index.css' type='text/css'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+
+<body>
+<div class="wrapper">
+    <div class="header">
+        {% include header.html %}
+    </div>
+    <div class="sidebar">
+        {% include sidebar.html %}
+    </div>
+    <div class="content">
+        <div class="inner">
+        <div class="bread">
+            {% include nav-breadcrumbs.html %}
+        </div>    
+          <div class="parts">
+            <div class="right-part"> 
+                  {% include related.html content=page.thumbnail %}  
+            </div>
+            <div class="left-part">
+            {{content}}    
+                <img width="100%"
+                class="lazyload"
+                data-src="/assets/img/call.webp"
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 335 86'%3E%3C/svg%3E"
+                >
+            </div>
+          </div>  
+        </div>  
+    </div>
+    <div class="footer">
+        {% include footer.html %}
+    </div>
+</div>
+
+
+</body>
+</html>

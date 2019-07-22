@@ -1,0 +1,30 @@
+---
+layout: default
+title: События
+permalink: /events/
+---
+<h1>События</h1>
+
+<ul class="event-list">
+	{% for events in site.categories.events %}
+	<li>
+		<div class="left">
+			<a href="{{ events.permalink }}">
+				<img
+				width="196"
+				class="lazyload"
+				src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7 4'%3E%3C/svg%3E" 
+				data-src="{{events.thumbnail}}"
+				/>	
+			</a>
+		</div>
+		<div class="right">
+		<span><a href="{{ events.permalink }}">{{events.title}}</a></span>
+		<p>{{events.excerpt}}</p>
+		<span class="date">{{ events.date | date: "%d.%m.%Y"}}</span>	
+		</div>
+		
+
+	</li>
+	{% endfor %}
+</ul>

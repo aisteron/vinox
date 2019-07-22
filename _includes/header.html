@@ -1,11 +1,99 @@
 <p class="header-tel">Телефон в Минске <a href="tel:+375173967373">+375 (17) 396-73-73</a></p>
 <header>
-    <a href="/"><img src="/assets/img/logo.jpg" alt="vinox logo" class="logo"></a>
+
+    <a class="logo-wrap" href="/" style="min-height: 95px; display: block; width: 268px; background-color: #eee; border-radius: 20px 20px 0 0">
+		
+    	
+    	<picture >
+    		<source media='(max-width: 729px)'
+    		sizes='0px'
+    		srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 1w'/>
+
+    		<source media='(min-width: 730px)'
+    		sizes='300px'
+    		srcset='/assets/img/logo.webp'/>
+    		<img src='/assets/img/logo.jpg' alt='This is a default image'/>
+    	</picture>
+	</a>
     <ul>
-        <li><a href="#">О компании</a></li>
-        <li><a href="#">Процессы</a></li>
-        <li><a href="#">Сервис</a></li>
-        <li><a href="#">Контактная информация</a></li>
+    	<style> 
+    		@media (max-width: 730px) { 
+    			header .m-logo { display: block !important; }
+    			.logo-wrap {display: none !important;}
+    			} 
+    		@media (max-width: 540px) { 
+    			header .t-menu { display: none !important; } 
+    			header .m-menu {display: flex !important;}}
+    	</style>
+    	<li class="m-logo" style="display: none; "><a href="/">VINOX</a></li>
+    	<div class="t-menu">
+	    	<li><a href="/about/">О компании</a></li>
+	        <li><a href="/process/">Процессы</a></li>
+	        <li><a href="/service/">Сервис</a></li>
+	        <li><a href="/contact/">Контактная информация</a></li>	
+    	</div>
+    	<div class="m-menu" style="display: none; ">
+    		<li><a href="tel:+375173967373">+375 (17) 396-73-73</a></li>
+    		<li ><a href="#">Фильтры &#9662;</a>
+    			<div class="inc" style="display: none; ">
+					{% include sidebar.html %}
+				</div>
+    		</li>
+    		<li class="m-icon" >
+    			<a href="#" onclick="openNav()">&#9776;</a>
+    			<nav>
+	    			<ul style="width: 0">
+	    				<li onclick="openNav()"><a href="tel:+375173967373">+375 (17) 396-73-73</a> <span>&times;</span></li>
+	    				<li><a href="/about/">О компании</a></li>
+	    				<li><a href="/process/">Процессы</a></li>
+	    				<li><a href="/service/">Сервис</a></li>
+	    				<li><a href="/contact/">Контактная информация</a></li>
+	    			</ul>	
+    			</nav>
+    			
+    		</li>
+    	</div>
+        
     </ul>
 </header>
-<img src="/assets/img/01.webp" onerror="this.onerror=null; this.src='/assets/img/01.jpeg'">
+<div class="swiper-container" >
+	<div class="swiper-wrapper">
+		<div class="swiper-slide">
+			<picture>
+				<source media='(max-width: 567px)'
+				sizes='0px'
+				srcset='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 1w'/>
+
+				<source media='(min-width: 570px)'
+				sizes='300px'
+				srcset='/assets/img/slide/01.webp' onerror="this.onerror=null; this.srcset='/assets/img/slide/01.jpg'"/>
+
+				<img src='/assets/img/slide/01.jpg' alt='This is a default image'/>
+			</picture>
+		</div>
+		<div class="swiper-slide step2" >
+			<img 
+			style="opacity: 0"
+			data-src="/assets/img/slide/02.webp" 
+			onerror="this.onerror=null; 
+			this.src='/assets/img/slide/02.jpg'">
+		</div>
+		<div class="swiper-slide step2">
+			<img 
+			style="opacity: 0"
+			data-src="/assets/img/slide/03.webp"
+			onerror="this.onerror=null; 
+			this.src='/assets/img/slide/03.jpg'">
+		</div>
+		<div class="swiper-slide step2">
+			<img 
+ 			style="opacity: 0"
+			data-src="/assets/img/slide/04.webp"
+			onerror="this.onerror=null; 
+			this.src='/assets/img/slide/04.jpg'">
+		</div>
+	</div>
+	<div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+

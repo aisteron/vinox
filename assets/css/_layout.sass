@@ -1,37 +1,87 @@
 body
  font-family: Arial, sans-serif
  background-color: #2c2c2c
+ h1
+  font-size: 1.1rem
+  color: #3a4292
+  font-weight: normal
+ ul
+  padding: 0 
  .header
    p.header-tel
     color: #fff
     position: absolute
     right: 0
     font-size: 18px
+    @media (max-width: 998px)
+     right: 1rem
+    @media (max-width: 730px) 
+     display: none
     a
      color: #fff
      text-decoration: none
      &:hover
       text-decoration: underline
+   .swiper-container
+    width: 998px
+    height: 338px
+    background: #eee
+    @media (max-width: 998px)
+     width: 100%
+    @media (max-width: 570px)
+     height: 0
+     width: 0   
+    .swiper-slide
+     overflow: hidden
+
  header
   background: transparent
   display: flex
-  img.logo
+  @media (max-width: 570px)
+   border-bottom: 1px solid #eee
+  picture img
    border-radius: 20px 20px 0 0
    margin-bottom: -4px
   ul
    background: #fff
-   display: flex
    flex-grow: 1
-   justify-content: space-around
-   height: max-content
    padding-bottom: 0.4rem
    margin-top: auto
    margin-bottom: 0
    border-radius: 0 15px 0 0
-   list-style: none
    padding-left: 0
+   .m-menu
+    display: flex
+    justify-content: space-between
+    flex-grow: 1
+    padding: 0 1.6rem 0 1rem
+    @media (max-width: 380px)
+     padding: 0 1.6rem 0 2rem
+    a
+     text-decoration: none
+    @media (max-width: 380px)
+     > li
+      &:first-of-type
+       display: none 
+   .t-menu
+    display: flex
+    justify-content: space-around
+    @media (max-width: 730px)
+    flex-grow: 1
+   @media (max-width: 730px)
+    border-radius: 0
+    padding-top: 0.4rem
+    padding-bottom: 0.6rem
+    display: flex
    li
     font-size: 1.1rem
+    &.m-logo
+     @media (max-width: 730px)
+      padding-left: 1.5rem
+     a
+      color: #3a4292
+      font-weight: bold
+      text-decoration: none
     &:before
      content: '\2022'
      font-size: 32px
@@ -43,13 +93,77 @@ body
       &:before
        content: ''
        padding: 0
-
+    @media (max-width: 910px)
+     font-size: 1rem
+     padding-top: 0.4rem
+     &:before
+      content: none !important
+  .inc ul 
+    flex-direction: column
+    position: absolute
+    box-shadow: 1px 9px 15px #33333336
+    padding: 1rem
+    right: 0.3rem
+    z-index: 1
+    top: 2.55rem
+    padding-top: 0
+    li 
+     padding-top: 1.4rem
+  nav ul 
+   flex-direction: column
+   height: 100%
+   position: fixed
+   z-index: 1
+   top: 0 
+   left: 0
+   background-color: #111
+   overflow-x: hidden
+   transition: 0.5s
+   li
+    padding: 1rem
+    min-width: 200px
+    &:first-of-type
+     padding-bottom: 1rem
+     padding-top: 0.5rem
+     span
+      color: #fff
+      float: right
+      padding: 0 0.3rem
+      font-size: 1.2rem
+      cursor: pointer
+    a 
+     color: #fff
+     &:visited
+      color: #fff
+.sidebar
+ ul
+  padding-left: 1.2rem
+  li
+   line-height: 200%
+   a
+    display: inline-block
+    width: 90%
+    padding: 0 0.3rem
+    transition: 0.3s all
+    &:hover
+     background: #3a4292
+     color: #fff
+     text-decoration: none
+     
 .wrapper
   width: 998px
+  @media (max-width: 998px)
+   width: 100%
   margin: 1rem auto
+  @media (max-width: 730px)
+   margin: 0
   display: grid
   grid-gap: 0
   grid-template-columns: 268px  730px
+  @media (max-width: 998px)
+   grid-template-columns: 268px  1fr
+  @media (max-width: 540px) 
+   grid-template-columns: 1fr
   grid-template-areas: "header header  header" "sidebar content content" "footer footer footer"
   color: #444
   position: relative
@@ -62,13 +176,17 @@ body
 
 .sidebar
   grid-area: sidebar
-  background-color: azure
+  background-color: #e7e7e7
+  position: relative
+  @media (max-width: 540px)
+   display: none
 
 .content
   grid-area: content
-  background-color: #ccc
+  background-color: #fff
   width: 730px
-
+  @media (max-width: 998px)
+   width: 100%
 .header
   grid-area: header
 
